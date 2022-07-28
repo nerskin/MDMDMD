@@ -5,6 +5,8 @@ First orders of business:
 2) Decide which [challenge](https://github.com/TNMDCollaborationWeek/Challenges) we're taking on
 
 These are the changes
+Test from Marcel :D
+Test from Shenpeng
 
 # Challenge 2: Open Data Challenge
 There were not many strong opinions but we went with option 2
