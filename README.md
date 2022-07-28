@@ -6,3 +6,7 @@ First orders of business:
 
 Test from Marcel :D
 Test from Shenpeng
+
+# Challenge 2: Open Data Challenge
+There were not many strong opinions but we went with option 2
+
