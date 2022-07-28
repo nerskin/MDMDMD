@@ -4,6 +4,7 @@ First orders of business:
 1) Choose a better team name
 2) Decide which [challenge](https://github.com/TNMDCollaborationWeek/Challenges) we're taking on
 
+These are the changes
 Test from Marcel :D
 Test from Shenpeng
 
