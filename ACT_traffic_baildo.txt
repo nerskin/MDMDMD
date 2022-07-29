@@ -1,0 +1,12 @@
+ACT TRAFFTC CAMERA OFFENCES
+
+baildo charts list
+
+DGBChart1.png - ACT Traffic Camera Offences by Client Type
+DGBChart2.png - ACT Traffic Camera Offences by Camera Type
+DGBChart3.png - ACT Traffic Camera Offences by Vehicle Registration State or Territory
+DGBChart4.png - ACT Camera Offences in ACT - Jult 2010 to March 2022 (time series)
+DGBChart5.png - Percentage breakdown of ACT Traffic Camera Speeding Offences, by speed in excess of limit (km/h)
+DGBChart6.png - ACT Traffic Camera Offence Hotspots 
+DGBChart7.png - Average monthly penalties for ACT Traffic Camera Offences 
+
