@@ -13,3 +13,10 @@ We have collected some static visualisations at [this page](placeholder)
 We have an interactive shiny app hosted at [this page](https://swanepoelmarcel.shinyapps.io/Traffic_Cam_Shiny/)
 
 The other files in the repository are intermediate data files and code used to produce the main outputs.
+
+## Bonus Points:
+
+We claim all available bonus points:
+
+* Six different people committed code to this repository.
+* We have one commit message that includes an emoji.
