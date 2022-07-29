@@ -13,12 +13,26 @@ runtime: shiny
 library(tidyverse)
 library(ggplot2)
 library(shiny)
+library(ozmaps)
+library(sf)
+library(janitor)
+library(basemaps)
+library(tmap)
+library(absmapsdata)
 ```
 
 
 ```{r}
 
 df <- read_csv("Traffic_camera_offences_and_fines.csv")
+
+df_map <- read_csv("Traffic_Camera_Locations_-_Point_Map.csv")
+
+df_new <- df_map %>%
+janitor::clean_names() %>%
+	mutate(location = str_remove(location,"\\(")) %>%
+	mutate(location = str_remove(location,"\\)")) %>% 
+	separate(location,into=c('lat','long'),sep=',') 
 ```
 
 
@@ -32,39 +46,52 @@ plot
  
 ```
 
-```{r, echo=FALSE}
-shinyApp(
-
-  ui = fluidPage(
-       titlePanel("Traffic Camera Offence and Fines"),
-    sidebarLayout(
-      sidebarPanel(
-selectInput("var",
-            label = "Choose X Axis", 
-            choices = list("State of Vehicle Registration", "Vehicle Category","Camera Type"), 
-            selected = "Camera Type")
-),
-mainPanel(
-  plotOutput("plot")
-)
-)
-  ),
-
-  server = function(input, output) {
-    
-df <- read_csv("Traffic_camera_offences_and_fines.csv")
-
-  
-  output$plot <- renderPlot({ggplot(df,aes(x = switch(input$var,"State of Vehicle Registration" = Rego_State, "Vehicle Category" = Clt_Catg, "Camera Type" = Camera_Type),
-                                             y = Sum_Pen_Amt)) +
-                                      geom_col()
-                                    
-  })
-  },
-
-  options = list(height = 500)
-)
 
 
+```{r}
+
+<<<<<<< HEAD
+#install spatial packages
+=======
+```
+>>>>>>> 84952864487ef1856371646c230ba2314fc367be
+
+#load spatial packages
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(rgdal)
+library(tmap)
+library(ggmap)
+library(dplyr)
+library(sf)
+library(ggspatial)
+library(rlang)
+library(broom)
+library(tidyverse)
+library(readxl)
+library(raustats)
+library(purrr)
+library("Census2016")
+```
+```{r}
+df_new$lat <- as.numeric(df_new$lat)
+df_new$long <- as.numeric(df_new$long)
 
 ```
+
+```{r}
+
+myLocation <- c(149.103,-35.45,149.25,-35.192)
+
+myMap <- get_map(location = myLocation, source = "osm", maptype = "watercolor", crop = FALSE)
+ggmap(myMap) + geom_point(data = df_new, aes(x = long, y = lat),
+ alpha = .5, color="darkred", size = 3)
+
+```
+
+<<<<<<< HEAD
+=======
+  #geom_point(data=df_new, aes(x=long, y=lat))
+```
+>>>>>>> 84952864487ef1856371646c230ba2314fc367be
