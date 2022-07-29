@@ -1,42 +1,19 @@
----
-title: "Traffic_Camera_Offences_Fines_Markdown"
-output: html_document
-date: '2022-07-28'
-runtime: shiny
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
 
-  
-  
----
-
-
-```{r} 
-library(tidyverse)
-library(ggplot2)
 library(shiny)
-```
+library(ggplot2)
+# Define UI for application that draws a histogram
+ui <- fluidPage(
 
-
-```{r}
-
-df <- read_csv("Traffic_camera_offences_and_fines.csv")
-```
-
-
-```{r}
-
-plot <- ggplot(df,aes(x = Clt_Catg, y = Sum_Pen_Amt)) + 
-  geom_col()
-
-plot
-
- 
-```
-
-```{r, echo=FALSE}
-shinyApp(
-
-  ui = fluidPage(
-       titlePanel("Traffic Camera Offence and Fines"),
+    # Application title
+    titlePanel("Traffic Camera Offence and Fines"),
     sidebarLayout(
       sidebarPanel(
 selectInput("var",
@@ -48,11 +25,10 @@ mainPanel(
   plotOutput("plot")
 )
 )
-  ),
-
-  server = function(input, output) {
-    
-df <- read_csv("Traffic_camera_offences_and_fines.csv")
+)
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+  df <- read_csv("Traffic_camera_offences_and_fines.csv")
 
   
   output$plot <- renderPlot({ggplot(df,aes(x = switch(input$var,"State of Vehicle Registration" = Rego_State, "Vehicle Category" = Clt_Catg, "Camera Type" = Camera_Type),
@@ -60,11 +36,7 @@ df <- read_csv("Traffic_camera_offences_and_fines.csv")
                                       geom_col()
                                     
   })
-  },
+}
 
-  options = list(height = 500)
-)
-
-
-
-```
+# Run the application 
+shinyApp(ui = ui, server = server)
