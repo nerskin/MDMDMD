@@ -10,7 +10,7 @@ We selected the Open Datasets challenge and decided to use data on traffic camer
 
 We have documented the metadata for the dataset at [this page](https://github.com/nerskin/collaboration_week_dream_team/blob/main/Traffic_Camera_Offences_Metadata.md)
 
-We have collected some static visualisations at [this page](placeholder)
+We have collected some static visualisations at [this page](https://github.com/nerskin/collaboration_week_dream_team/blob/main/static_vis.md)
 
 We have an interactive shiny app hosted at [this page](https://swanepoelmarcel.shinyapps.io/Traffic_Cam_Shiny/)
 
