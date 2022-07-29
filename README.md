@@ -1,23 +1,15 @@
-This will be the repository that we use to address whichever collaboration week challenge we take on.
+## Open Datasets Challenge
 
-First orders of business:
-1) Choose a better team name
-2) Decide which [challenge](https://github.com/TNMDCollaborationWeek/Challenges) we're taking on
+We selected the Open Datasets challenge and decided to use data on traffic cameras in the ACT. The data that we used is published by the ACT government as two separate datasets:
 
-# Challenge 2: Open Data Challenge
-There were not many strong opinions but we went with option 2
+* The [Traffic Camera Offences and Fines dataset](https://data.gov.au/dataset/ds-act-https%3A%2F%2Fwww.data.act.gov.au%2Fapi%2Fviews%2F2sx9-4wg7/details?q=), which gives details on violations detected by traffic cameras and the corresponding fines.
+* The [Traffic Camera Locations] dataset, which provides the precise locations of cameras in the first dataset.
 
 
-## Dataset
+We have documented the metadata for the dataset at [this page](https://github.com/nerskin/collaboration_week_dream_team/blob/main/Traffic_Camera_Offences_Metadata.md)
 
-### [Traffic camera offences and fines (ACT)](https://data.gov.au/dataset/ds-act-https%3A%2F%2Fwww.data.act.gov.au%2Fapi%2Fviews%2F2sx9-4wg7/details?q=)
-Additional data: [this file allows cameras to be geolocated](https://www.data.act.gov.au/api/views/i6cy-cqgf/rows.csv?accessType=DOWNLOAD)
+We have collected some static visualisations at [this page](placeholder)
 
-## Metadata
-
-
-
-
-## Summary Statistics and Visualisations
+We have an interactive shiny app hosted at [this page](https://swanepoelmarcel.shinyapps.io/Traffic_Cam_Shiny/)
 
 
