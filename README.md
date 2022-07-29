@@ -20,5 +20,5 @@ The other files in the repository are intermediate data files and code used to p
 
 We claim all available bonus points:
 
-* Six different people committed code to this repository.
+* Seven different people committed to this repository.
 * We have one commit message that includes an emoji.
