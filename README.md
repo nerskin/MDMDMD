@@ -14,7 +14,7 @@ We have an interactive shiny app hosted at [this page](https://swanepoelmarcel.s
 
 The other files in the repository are intermediate data files and code used to produce the main outputs.
 
-## Bonus Points:
+## Bonus Points
 
 We claim all available bonus points:
 
