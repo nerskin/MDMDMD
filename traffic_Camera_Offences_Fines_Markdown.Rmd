@@ -51,8 +51,39 @@ plot
 
 ```{r}
 
-get_maptypes()
+#install spatial packages
 
-
-  #geom_point(data=df_new, aes(x=long, y=lat))
+#load spatial packages
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(rgdal)
+library(tmap)
+library(ggmap)
+library(dplyr)
+library(sf)
+library(ggspatial)
+library(rlang)
+library(broom)
+library(tidyverse)
+library(readxl)
+library(raustats)
+library(purrr)
+library("Census2016")
 ```
+```{r}
+df_new$lat <- as.numeric(df_new$lat)
+df_new$long <- as.numeric(df_new$long)
+
+```
+
+```{r}
+
+myLocation <- c(149.103,-35.45,149.25,-35.192)
+
+myMap <- get_map(location = myLocation, source = "osm", maptype = "watercolor", crop = FALSE)
+ggmap(myMap) + geom_point(data = df_new, aes(x = long, y = lat),
+ alpha = .5, color="darkred", size = 3)
+
+```
+
