@@ -18,6 +18,7 @@ library(sf)
 library(janitor)
 library(basemaps)
 library(tmap)
+library(absmapsdata)
 ```
 
 
@@ -31,9 +32,7 @@ df_new <- df_map %>%
 janitor::clean_names() %>%
 	mutate(location = str_remove(location,"\\(")) %>%
 	mutate(location = str_remove(location,"\\)")) %>% 
-	separate(location,into=c('lat','long'),sep=',')
-
-
+	separate(location,into=c('lat','long'),sep=',') 
 ```
 
 
@@ -51,7 +50,11 @@ plot
 
 ```{r}
 
+<<<<<<< HEAD
 #install spatial packages
+=======
+```
+>>>>>>> 84952864487ef1856371646c230ba2314fc367be
 
 #load spatial packages
 library(plyr)
@@ -87,3 +90,8 @@ ggmap(myMap) + geom_point(data = df_new, aes(x = long, y = lat),
 
 ```
 
+<<<<<<< HEAD
+=======
+  #geom_point(data=df_new, aes(x=long, y=lat))
+```
+>>>>>>> 84952864487ef1856371646c230ba2314fc367be
