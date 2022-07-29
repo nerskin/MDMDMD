@@ -26,5 +26,7 @@ This file collects a number of static visualisations members of the team produce
 
 ![DGBChart5](https://user-images.githubusercontent.com/22582719/181699494-23988f8a-6385-42fb-87ee-d6b279bddb19.png)
 
-![DGBChart1](https://user-images.githubusercontent.com/22582719/181699682-4f600a31-cb08-424f-87be-45a472f9b9ff.png)
+## Basic Summary Statistics
+
+![Summary statistics](https://user-images.githubusercontent.com/22582719/181699886-0d765051-b043-4a4e-907d-4b5059b06652.PNG)
 
